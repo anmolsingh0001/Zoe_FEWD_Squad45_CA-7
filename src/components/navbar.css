@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0px;
+    font-family: 'segoe ui';
+    background-color: rgb(226, 218, 216);
+  }
+  
+  .nav {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 11px 10px 30px;
+  }
+  
+  
+  
+  .nav > .nav-links {
+    display: inline;
+    /* float: right; */
+    font-size: 1.5rem;
+    margin-right: 2rem;
+  }
+  
+  
+
+  .nav > .nav-links > a {
+    height: 6vw;
+    display: inline-block;
+    padding: 0px 10px 0px 20px;
+    text-decoration: none;
+    color: #efefef;
+}
+  .nav-title img{
+    width: 100%;
+  }
+  
+  
+  
+  .nav > #nav-check {
+    display: none;
+  }
+  
+
+  @media screen and (min-width:1400px) {
+    .nav > .nav-links > a:hover {
+        color: red;
+        scale: 1.3;
+        transition: 0.4s;
+      }
+  }
+  @media (max-width:600px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 60px;
+      height: 50px;
+      margin-top: 2rem;
+  }
+
+  .nav > .nav-links > a {
+    height: 16vw;
+    display: inline-block;
+    padding: 0px 10px 0px 20px;
+    text-decoration: none;
+    color: #efefef;
+}
+    
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+        position: absolute;
+        /* display: block; */
+        display: flex;
+        width: 100%;
+        background-color: #333;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 79px;
+        left: 0px;
+        flex-direction: column;
+    }
+    .nav > .nav-links > h3 {
+      display: block;
+      width: 100%;
+    }
+    
+    .nav > #nav-check:checked ~ .nav-links {
+      height: 24vh;
+      overflow-y: auto;
+    }
+  }
+  .nav >.nav-header >.nav-title {
+    width: 75%;
+    padding: unset;
+}
